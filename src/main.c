@@ -47,6 +47,7 @@ void fillVoidStar(void* pData , int size)
 {
   // fill the memory pointed to by pData with 
   // zeros
+  // memset(destination, byte, count)
   memset(pData, '\0', size);
 }
 
@@ -62,6 +63,7 @@ void fillVoidStar(void* pData , int size)
  *********************************************************************/
 void copyDoubleToVoidStar(void* pData , double data)
 {
+  // memcpy(destination, source, size)
   memcpy(pData, &data, sizeof(double));
 }
 
