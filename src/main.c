@@ -109,6 +109,11 @@ int main()
   printf("*(int*) pVoid: %d\n", *(int*) pVoid);
   printf("intValue: %d\n", intValue);
 
+  *(int*) pVoid = 2;
+
+  printf("*(int*) pVoid: %d\n", *(int*) pVoid);
+  printf("intValue: %d\n", intValue);
+
   fillVoidStar(pVoid, sizeof(int));
   printf("intValue: %d\n", intValue);
 
