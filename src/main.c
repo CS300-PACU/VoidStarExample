@@ -97,10 +97,11 @@ void copyDoubleFromVoidStarAndPrint(void* pData)
 
 int main()
 {
-  int intValue;
-  void *pVoid;
   double decimal = 0.0;
   Element sMyStruct;
+
+  int intValue;
+  void *pVoid;
 
   /******int*********/
 

@@ -5,43 +5,21 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "(gdb) Launch with args", // Change name
-      "type": "cppdbg",
+      "name": "(lldb) Launch with args", // Change name
+      "type": "lldb",
       "request": "launch",
       "program": "${workspaceFolder}/bin/main", // THIS IS IMPORTANT
       "args": ["64.59.225.81", "/chadd/cs360f21/LabHttp.html"], // add comma separated list of args here.
-      "stopAtEntry":  true, // THIS IS IMPORTANT 
       "cwd": "${workspaceFolder}",
-      "environment": [],
-      "externalConsole": false,
-      "MIMode": "gdb",
-      "setupCommands": [
-          {
-              "description": "Enable pretty-printing for gdb",
-              "text": "-enable-pretty-printing",
-              "ignoreFailures": true
-          }
-      ],
       "preLaunchTask": "runMake", // THIS IS IMPORTANT
     },
     {
-      "name": "(gdb) Launch",
-      "type": "cppdbg",
+      "name": "(lldb) Launch",
+      "type": "lldb",
       "request": "launch",
       "program": "${workspaceFolder}/bin/main", // THIS IS IMPORTANT
       "args": [],
-      "stopAtEntry": true, // THIS IS IMPORTANT 
       "cwd": "${workspaceFolder}",  
-      "environment": [],
-      "externalConsole": false,
-      "MIMode": "gdb",
-      "setupCommands": [
-        {
-          "description": "Enable pretty-printing for gdb",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        }
-      ],
       "preLaunchTask": "runMake", // THIS IS IMPORTANT
     }
   ]
