@@ -95,6 +95,8 @@ void copyDoubleFromVoidStarAndPrint(void* pData)
  Returned:    int, exit status
  *********************************************************************/
 
+#define SIZE 100
+
 int main()
 {
   double decimal = 0.0;
@@ -102,6 +104,8 @@ int main()
 
   int intValue;
   void *pVoid;
+
+  void *apData[SIZE];
 
   /******int*********/
 
@@ -151,6 +155,14 @@ int main()
   // pVoid = &sMyStruct.data; // ???
   fillVoidStar(pVoid, sizeof(int));
   printMyStruct(sMyStruct);
+
+
+  /***** Array ******/
+  apData[0] = malloc(sizeof(int));
+  *(int*)apData[0] = 9;
+  printf("%d %p\n", *(int*) apData[0], apData[0]);
+
+  free(apData[0]);
 
   return EXIT_SUCCESS;
 }
