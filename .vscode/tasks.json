@@ -23,18 +23,37 @@
   {
     "label": "clean",
     "type": "shell",
-    "linux": {
-        "command": "make",
-        "args": [
-            "clean"
+    "command": "make",
+    "args": [
+        "clean"
         ]
-    },
+        ,
     "options": {
         "cwd": "${workspaceFolder}"
     },
     "problemMatcher": [
         "$gcc"
       ]
-   } 
+   },
+   {
+    "label": "printToPDF",
+    "type": "shell",
+    "command": "make printAll",
+    "group": {
+        "kind": "none"
+    },
+    "problemMatcher": []
+    }, 
+    {
+        "label": "valgrind",
+        "type": "shell",
+        "command": "make valgrind",
+        "group": {
+            "kind": "none"
+        },
+        "problemMatcher": []
+        }, 
+    
   ]
+  
 }
