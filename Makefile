@@ -21,7 +21,7 @@ bin/main.o: src/main.c
 valgrind: bin/main
 	valgrind -v --leak-check=yes --track-origins=yes --leak-check=full --show-leak-kinds=all bin/main
 
-printMain:
+printAll:
 	enscript -C -T 2 -p - -M Letter -Ec --color -fCourier8 src/main.c  | ps2pdf - bin/main.pdf
 
 clean:
